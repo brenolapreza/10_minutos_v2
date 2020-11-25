@@ -9,7 +9,7 @@ export default function Home(){
     const [produtos, setProdutos] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3000/categorias')
+        axios.get('https://api10minutos.herokuapp.com/categorias')
         .then((response) => {
             setProdutos(response.data)
         })
