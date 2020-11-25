@@ -28,10 +28,10 @@ export default function Home(){
                     {produtos.map((prod, index) => (
                         <li key={index}>
                             <div>
-                                <img src={prod.url} alt=""/>
+                                <img src={prod.thumbnail} alt=""/>
                             </div>
                             <div>
-                                <h3><a href={`episodio/`}>{prod.name}</a></h3>
+                                <h3><a href={`episodio/`}>{prod.title}</a></h3>
                             </div>
                         </li>
                         ))}
