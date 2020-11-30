@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Api from '../../Api'
 import { ContainerForm, Form, WrapperTitle } from '../style';
 
 import Nav from '../../nav'
@@ -18,7 +19,7 @@ export default function CreateEpisodios(){
     }
     function handleChangeForm(e){
         e.preventDefault();
-            axios.post('http://localhost:3000/categorias', campos).then((response) => {
+            Api.post(campos).then((response) => {
                 setCampos(response.data)
                 alert('Produto Cadastrado!')
             })
